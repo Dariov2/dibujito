@@ -1,0 +1,29 @@
+var img;
+var m;
+function preload(){
+  img = loadImage("mikyrata.png");
+}
+
+function setup() {
+  m = new Miky();
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+  imageMode(CENTER);
+  image(img,this.x,this.y,150,150);
+  m.mostrar();
+  if(keyIsPressed && keyCode == RIGHT_ARROW){
+    m.derecha();
+  }
+  if(keyIsPressed && keyCode == LEFT_ARROW){
+    m.izquierda();
+  }
+  if(keyIsPressed && keyCode == UP_ARROW){
+    m.arriba();
+  }
+  if(keyIsPressed && keyCode == DOWN_ARROW){
+    m.abajo();
+  }
+}
