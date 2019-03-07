@@ -1,0 +1,22 @@
+class Miky{
+  constructor(){
+    this.x = width/2;
+    this.y = height/2;
+  }
+  derecha(){
+    this.x++;
+  }
+  arriba(){
+    this.y--;
+  }
+  izquierda(){
+    this.x--;
+  }
+  abajo(){
+    this.y++;
+  }
+  mostrar(){
+    imageMode(CENTER);
+    image(img,this.x,this.y,200,150);
+  }
+}
